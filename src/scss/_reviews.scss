@@ -1,0 +1,145 @@
+.reviews {
+	position: relative;
+
+	.reviews__item {
+		min-height: 150px;
+		position: relative;
+		padding-left: 235px;
+
+		@include respond-to(tablets) { padding-left: 180px; }
+
+		@include respond-to(wide-handhelds) { padding-left: 0; }
+
+		.reviews__photo {
+			width: 165px;
+			height: auto;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			border: 2px solid #95e1d3;
+			border-radius: 50%;
+
+			@include respond-to(tablets) {
+				width: 150px;
+				height: 150px;
+			}
+
+			@include respond-to(wide-handhelds) {
+				position: static;
+				margin: 0 auto 20px;
+			}
+		}
+
+		.reviews__text {
+			font-size: 24px;
+			font-style: italic;
+			font-weight: 300;
+			color: #999;
+			margin-bottom: 15px;
+
+			@include respond-to(laptops) { font-size: 18px; }
+		
+			@include respond-to(wide-handhelds) {font-size: 14px;}
+		}
+
+		.reviews__author {
+			font-size: 24px;
+			font-family: 'Kaushan Script', cursive;
+			color: #333;
+
+			@include respond-to(wide-handhelds) { font-size: 14px; }
+
+			&:before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				width: 60px;
+				height: 3px;
+				background-color: #f38181;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.slick-slider {
+		padding: 0 110px;
+		
+		@include respond-to(tablets) { padding: 0 60px; }
+
+		@include respond-to(wide-handhelds) {justify-content: center;}
+
+		@include respond-to(handhelds) { padding: 0; }
+		.slick-prev {
+		left: 0;
+		transform: rotate(-90deg);
+
+		&.slick-arrow {
+			display: block;
+			font-size: 0;
+			color: transparent;
+
+			cursor: pointer;
+			border: 0;
+			background: none;
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+			transform: translateY(-50%);
+
+			@include respond-to(handhelds) {top: 20%;}
+
+			&:focus {
+				outline: 0;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				width: 18px;
+				height: 18px;
+				border-top: 2px solid #cccccc;
+				border-left: 2px solid #cccccc;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	.slick-next {
+		right: 0;
+		transform: rotate(90deg);
+
+		&.slick-arrow {
+			display: block;
+			font-size: 0;
+			color: transparent;
+
+			cursor: pointer;
+			border: 0;
+			background: none;
+			position: absolute;
+			top: 50%;
+			z-index: 1;
+			transform: translateY(-50%);
+
+			@include respond-to(handhelds) {top: 20%;}
+
+			&:focus {
+				outline: 0;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				width: 18px;
+				height: 18px;
+				border-top: 2px solid #cccccc;
+				border-left: 2px solid #cccccc;
+				transform: rotate(135deg);
+			}
+		}
+	}
+}
+

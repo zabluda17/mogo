@@ -1,0 +1,72 @@
+.section {
+	padding: 80px 0;
+
+	@include respond-to(wide-handhelds) {padding: 40px 0;}
+
+	.section__header {
+		width: 100%;
+		max-width: 950px;
+		margin: 0 auto 50px;
+		text-align: center;
+
+		@include respond-to(handhelds) {margin-bottom: 30px;}
+
+		.section__suptitle {
+			font-size: 24px;
+			font-family: 'Kaushan Script', cursive;
+			color: #333;
+
+			@include respond-to(handhelds) {font-size: 20px;}
+		}
+
+		.section__title {
+			font-size: 30px;
+			font-weight: 700;
+			color: #333;
+			text-transform: uppercase;
+
+			@include respond-to(handhelds) {font-size: 24px;}
+
+			&:after {
+				content: "";
+				display: block;
+				width: 60px;
+				height: 3px;
+				background-color: #f38181;
+				margin: 25px auto;
+
+				@include respond-to(handhelds) {margin: 20px auto;}
+			}
+		}
+
+		.section__text {
+			font-size: 15px;
+			color: #999;
+		}
+	}
+
+	&.section--gray {
+		background-color: #f8f8f8;
+	}
+
+	&.section--devices {
+		margin-bottom: 40px;
+		padding-bottom: 0;
+		background: url("../img/devices-bg.jpg") center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+
+		@include respond-to(wide-handhelds) { padding-bottom: 0; }
+	}
+
+	&.section--clients {
+		background: #f5f5f5 url(../img/clients-bg.jpg) center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	&.section--map {
+		background: #e6e6e6 url(../img/map-bg.jpg) center no-repeat / cover;
+		padding: 40px 0;
+	}
+}

@@ -1,0 +1,28 @@
+.logos {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 -15px;
+
+	@include respond-to(handhelds) {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.logos__item {
+		padding: 0 15px;
+
+		@include respond-to(handhelds) {
+			width: 50%;
+			margin-bottom: 10px;
+		}
+
+		.logos__img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+
+			@include respond-to(handhelds) {margin: 0 auto;}
+		}
+	}
+}

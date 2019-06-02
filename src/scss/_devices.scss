@@ -1,0 +1,27 @@
+.devices {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+
+	@include respond-to(handhelds) { max-width: 320px; }
+
+	.devices__item {
+		display: block;
+		max-width: 100%;
+		height: auto;
+
+		&.devices__item--iphone {
+			position: absolute;
+			bottom: -80px;
+			right: 0;
+			z-index: 1;
+
+			@include respond-to(handhelds) {
+				width: 180px;
+				right: -80px;
+				bottom: -50px;
+			}
+		}
+	}
+}

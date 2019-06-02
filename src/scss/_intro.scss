@@ -1,0 +1,56 @@
+.intro	{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	min-height: 600px;
+	height: 100vh;
+	position: relative;
+	background: url("../img/intro.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	
+	.intro__inner {
+		text-align: center;
+		width: 100%;
+		max-width: 880px;
+		margin: 0 auto;
+		
+		.intro__suptitle {
+			margin-top: 80px;
+			margin-bottom: 0;
+			font-size: 50px;
+			color: #fff;
+			font-family: 'Kaushan Script', cursive;
+
+			@include respond-to(laptops) { font-size: 45px; }
+			@include respond-to(tablets) { font-size: 40px; }
+			@include respond-to(handhelds) { font-size: 30px; }
+		}
+
+		.intro__title{
+			color: #fff;
+			font-size: 90px;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 1;
+			margin: 0;
+			
+			@include respond-to(laptops) { font-size: 80px; }
+			@include respond-to(tablets) { font-size: 70px; }
+			@include respond-to(handhelds) { 
+				font-size: 50px;
+				margin: 20px auto 40px; }
+
+			&:after {
+				content: "";
+				display: block;
+				width: 60px;
+				height: 3px;
+				margin: 20px auto;
+				background-color: #fff;
+			}
+
+		}
+	}
+}

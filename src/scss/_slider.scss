@@ -1,0 +1,52 @@
+.slider {
+	display: flex;
+	justify-content: space-between;
+
+	.slider__inner {
+		display: flex;
+		justify-content: space-between;
+
+		.slider__item {
+			width: 23%;
+			padding: 20px 0;
+			position: relative;
+
+			border-top: 3px solid #fff;
+			opacity: .7;
+
+			font-size: 18px;
+			color: #fff;
+			text-transform: uppercase;
+
+			&.active {
+				opacity: 1;
+
+				&:before {
+					content: "";
+					display: block;
+					width: 70px;
+					height: 3px;
+
+					background-color: #f38181;
+
+					position: absolute;
+					top: -3px;
+					left: 0;
+					z-index: 1;
+
+					@include respond-to(wide-handhelds) { width: 30%; }
+				}
+			}
+
+			.slider__num {
+				font-size: 24px;
+				font-weight: 700;
+			}
+			
+			.slider__text {
+				@include respond-to(wide-handhelds) { display: none; }
+			}
+
+		}
+	}
+}

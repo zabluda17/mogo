@@ -1,0 +1,69 @@
+.subscribe {
+	width: 100%;
+	max-width: 380px;
+	display: flex;
+
+	@include respond-to(handhelds) {
+		flex-wrap: wrap;
+		max-width: none;
+	}
+
+	.subscribe__input {
+		width: 60%;
+		height: 40px;
+		padding: 12px;
+		line-height: 1.1;
+		border-right: 0;
+
+		background: #fff;
+		border: 1px solid #e7e7e7;
+
+		font-family: 'Montserrat', sans-serif;
+		font-size: 15px;
+		color: #333;
+		font-weight: 300;
+
+		@include respond-to(handhelds) {
+			border-right: 1px solid #e7e7e7;
+			margin-bottom: 10px;
+		}
+
+		&::placeholder {
+			color: #cccccc;
+			font-style: italic;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: #95e1d3;
+		}
+	}
+
+	.subscribe__btn {
+		width: 40%;
+		height: 40px;
+		padding: 12px 30px;
+		line-height: 1.1;
+
+		font-size: 14px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		
+		background-color: #95e1d3;
+		border: 0;
+		cursor: pointer;
+		transition: background-color .2s linear;
+	
+		@include respond-to(handhelds) {width: 100%;}
+
+		&:hover {
+			background-color: #74c7b8;
+		}
+
+		&:focus {
+			outline: 0;
+		}
+	}
+}
